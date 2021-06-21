@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{stylesheets/Rectangle.css}">
+    <title>Adding a rectangle</title>
+</head>
+
+<body>
+    <div class="block">
+        <h1>Enter details in the required fields to be added </h1>
+        <form action="#" method="post" th:action="@{/AddingRec}" th:object="${rectangle}" onsubmit="return myFunction1()" name="recTable">
+            <table class="table1">
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" th:field=*{name} name="name"></td>
+                </tr>
+                <tr>
+                    <td>Width</td>
+                    <td><input type="number" th:field=*{width} name="width"></td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td><input type="number" th:field=*{height} name="height"></td>
+                </tr>
+                <tr>
+                    <td>Color</td>
+                    <td><input type="text" th:field=*{color} name="color"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit Rectangle">
+        </form>
+        <p id="invalidInput0"></p>
+
+        <form action="#" method="POST" th:action="@{/}">
+            <input type="submit" value="Return to database">
+        </form>
+    </div>
+
+    <script type="text/javascript" th:src="@{/rectangle.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{stylesheets/Rectangle.css}">
+    <title>Delete a Rectangle</title>
+</head>
+
+<body>
+    <div class="block">
+        <h1>Delete a Rectangle</h1>
+        
+        <p>Enter the rectangle that you would like to be deleted from the database</p>
+
+        <form action="#" method="POST" th:action="@{/delete}" th:object="${rectangle}" onsubmit="return myFunction2()" name="rectD2">
+            <input type="number" th:field=*{id} value="id" name="id">
+            <input type="submit" value="delete">
+        </form>
+        <p id="invalidInput1"></p>
+
+        
+        <form action="#" method="POST" th:action="@{/}">
+            <input type="submit" value="Return back to the database">
+        </form>
+    </div>
+
+    <script type="text/javascript" th:src="@{/rectangle.js}">
+    </script>
+</body>
+
+
+</html>

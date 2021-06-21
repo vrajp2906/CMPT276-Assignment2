@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{stylesheets/Rectangle.css}">
+    <title>Rectangle Home</title>
+</head>
+
+<body>
+  <div class="block">
+    <h1 style="text-align:center">Rectangles Database</h1>
+    <style>
+    h1 {
+      display: block;
+      font-size: 2em;
+      margin-top: 0.67em;
+      margin-bottom: 0.67em;
+      margin-left: 0;
+      margin-right: 0;
+      font-weight: bold;
+    }
+   </style>
+    
+    <h2>Rectangles stored</h2>
+
+    <p> Click on the rectangle name for full details </p>
+    <table>
+      <tr>
+        <th>Rectange Number</th>
+        <th>Name</th>
+        <th>Width</th>
+        <th>Height</th>
+      </tr>
+
+      <tr th:each="rectangle : ${rectangles}">
+        <td th:text="${rectangle.id}"></td>
+        <td><a th:text="${rectangle.name}" th:href="@{'/view/'+ ${rectangle.id}}"></a></td>
+        <td th:text="${rectangle.width}"></td>
+        <td th:text="${rectangle.height}"></td>
+       
+      </tr>
+
+    </table>
+
+    <p> <a th:href="@{/AddingRe}">Click to add new rectangle to the database</a> </p>
+    <p> <a th:href="@{/delete}">Click to remove an existing rectangle from the database</a> </p>
+
+  </div>
+
+</body>
+
+</html>
