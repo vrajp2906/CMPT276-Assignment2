@@ -33,8 +33,9 @@ $ git push heroku main
 $ heroku open
 ```
 
-## Documentation
+##App details
 
-For more information about using Java on Heroku, see these Dev Center articles:
+Link: https://cmpt276rectanglesa2.herokuapp.com/
 
-- [Java on Heroku](https://devcenter.heroku.com/categories/java)
+![image](https://user-images.githubusercontent.com/84152443/157133010-1f49b0bc-60a5-479e-b8a1-70066004a6f7.png)
+
